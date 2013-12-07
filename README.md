@@ -27,7 +27,8 @@ OAuth2Parameters oAuthParams = new OAuth2Parameters();
 oAuthParams.setRedirectUri("http://yoursite.com/oauth/");
 oAuthParams.setScope("https://www.googleapis.com/auth/plus.me
     https://www.googleapis.com/auth/plus.moments.write");
-String url = factory.getOAuthOperations().buildAuthenticateUrl(GrantType.AUTHORIZATION_CODE, oAuthParams);
+String url = factory.getOAuthOperations()
+    .buildAuthenticateUrl(GrantType.AUTHORIZATION_CODE, oAuthParams);
 response.sendRedirect(url);
 ```
 
