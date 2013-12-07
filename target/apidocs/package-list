@@ -1,0 +1,8 @@
+com.googlecode.googleplus
+com.googlecode.googleplus.core
+com.googlecode.googleplus.impl
+com.googlecode.googleplus.model
+com.googlecode.googleplus.model.activity
+com.googlecode.googleplus.model.comment
+com.googlecode.googleplus.model.history
+com.googlecode.googleplus.model.person

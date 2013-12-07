@@ -1,0 +1,34 @@
+10
+
+dir
+33
+https://google-plus-java-api.googlecode.com/svn/trunk/src
+https://google-plus-java-api.googlecode.com/svn
+
+
+
+2012-07-16T21:48:17.873624Z
+33
+bozhidar.bozhanov@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+795757a3-0ee7-ef76-1e98-031a9adae8c6
+
+main
+dir
+
+test
+dir
+

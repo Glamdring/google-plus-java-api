@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments
+END
+Moment.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/Moment.java
+END
+MomentCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/MomentCollection.java
+END
+MomentFeed.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/MomentFeed.java
+END
+Result.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/Result.java
+END
+MomentType.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/MomentType.java
+END
+Target.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/model/moments/Target.java
+END

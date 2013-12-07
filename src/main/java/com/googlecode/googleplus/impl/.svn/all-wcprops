@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/33/trunk/src/main/java/com/googlecode/googleplus/impl
+END
+MomentsOperationsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/impl/MomentsOperationsImpl.java
+END
+ActivityOperationsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/11/trunk/src/main/java/com/googlecode/googleplus/impl/ActivityOperationsImpl.java
+END
+CommentOperationsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/27/trunk/src/main/java/com/googlecode/googleplus/impl/CommentOperationsImpl.java
+END
+PeopleOperationsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/impl/PeopleOperationsImpl.java
+END
+PlusImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/34/trunk/src/main/java/com/googlecode/googleplus/impl/PlusImpl.java
+END

@@ -1,0 +1,13 @@
+package com.googlecode.googleplus.model.moments;
+
+public class Target {
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+}
