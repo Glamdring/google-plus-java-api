@@ -8,10 +8,11 @@ public enum MomentType {
     CHECK_IN("http://schemas.google.com/CheckInActivity"),
     COMMENT("http://schemas.google.com/CommentActivity"),
     CREATE("http://schemas.google.com/CreateActivity"),
+    DISCOVER("http://schemas.google.com/DiscoverActivity"),
     LISTEN("http://schemas.google.com/ListenActivity"),
     RESERVE("http://schemas.google.com/ReserveActivity"),
     REVIEW("http://schemas.google.com/ReviewActivity"),
-    VIEW("http://schemas.google.com/ViewActivity");
+    WANT("http://schemas.google.com/WantActivity");
 
     private String type;
 
