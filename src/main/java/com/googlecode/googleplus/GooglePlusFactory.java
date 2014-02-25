@@ -9,6 +9,10 @@ import com.googlecode.googleplus.core.OAuth2RefreshCallback;
 import com.googlecode.googleplus.core.OAuth2RefreshListener;
 import com.googlecode.googleplus.impl.PlusImpl;
 
+/**
+ * Suitable for direct use - if you are using Spring Social configuration builder see GooglePlusConnectionFactory.
+ * 
+ */
 public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
 
     private GooglePlusConfiguration config;
