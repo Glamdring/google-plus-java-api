@@ -30,6 +30,8 @@ public class GooglePlusAdapter implements ApiAdapter<Plus> {
     public UserProfile fetchUserProfile(Plus api) {
         Person person = api.getPeopleOperations().get("me");
         UserProfileBuilder builder = new UserProfileBuilder().setFirstName(person.getName().getGivenName()).setLastName(person.getName().getFamilyName());
+        builder.setEmail(person.getGoogleAccountEmail());
+        builder.setName(person.getName().getFormatted());
         return builder.build();
     }
 

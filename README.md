@@ -39,6 +39,26 @@ AccessGrant accessGrant = factory.getOAuthOperations()
     .exchangeForAccess(code, oAuthParams.getRedirectUri(), null);
 ```
 
+####Spring Social Configuration
+
+If you want to integrate using Spring Social as described <a href="http://docs.spring.io/spring-social/docs/1.0.3.RELEASE/reference/html/connecting.html">in their documentation</a> simply add:
+
+```java
+        registry.addConnectionFactory(new GooglePlusConnectionFactory(
+            environment.getProperty("google.clientId"),
+            environment.getProperty("google.clientKey")))
+```
+
+Where the clientId and clientKey are supplied by Google having created a Web Application (not a Service Account or Installed Application).
+
+An example scope:
+
+```
+https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+```
+
+Google allows the registration of multiple email addresses of various types. For the purposes of UserProfile (as supplied by Spring Social), the email address is of the Google Account type. This may be null.
+
 ###Dependencies
 
 This library depends on a couple of libraries. All of them are industry-standards - widely tested and adopted:
