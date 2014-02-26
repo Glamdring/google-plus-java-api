@@ -47,9 +47,9 @@
     </licenses>
 
     <scm>
-        <url>http://code.google.com/p/google-plus-java-api/source/browse/</url>
-        <connection>scm:svn:http://google-plus-java-api.googlecode.com/svn/trunk/</connection>
-        <developerConnection>scm:svn:https://google-plus-java-api.googlecode.com/svn/trunk/</developerConnection>
+        <connection>scm:git:https://github.com/Glamdring/google-plus-java-api.git</connection>
+        <developerConnection>scm:git:https://github.com/Glamdring/google-plus-java-api.git</developerConnection>
+        <url>https://github.com/Glamdring/google-plus-java-api</url>
     </scm>
 
     <developers>
