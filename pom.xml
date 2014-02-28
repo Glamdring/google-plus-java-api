@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.googlecode.googleplus</groupId>
     <artifactId>google-plus-java-api</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <description>A Java client for the Google+ API</description>
     <name>Google+ Java API</name>
     <url>http://code.google.com/p/google-plus-java-api/</url>
