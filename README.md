@@ -81,7 +81,7 @@ You can download the .jar file from the <a href="https://github.com/Glamdring/go
         <version>0.0.1-SNAPSHOT</version>
     </dependency>
 
-The repository you have to add is:
+If you want to use the latest SNAPSHOT, the repository you have to add is:
 
     <repository>
         <id>sonatype-oss</id>
