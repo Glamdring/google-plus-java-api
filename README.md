@@ -78,7 +78,7 @@ You can download the .jar file from the <a href="https://github.com/Glamdring/go
     <dependency>
         <groupId>com.googlecode.googleplus</groupId>
         <artifactId>google-plus-java-api</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </dependency>
 
 If you want to use the latest SNAPSHOT, the repository you have to add is:

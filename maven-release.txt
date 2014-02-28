@@ -1,1 +1,5 @@
-mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -DpomFile=pom.xml -Dfile=target/google-plus-java-api-0.0.1.jar -Dgpg.passphrase=PASSPHRASE
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -Dfile=target/google-plus-java-api-0.0.1.jar -DartifactId=google-plus-java-api -DgroupId=com.googlecode.googleplus -Dversion=0.0.1 -Dgpg.passphrase=PASSPHRASE
+
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -Dfile=target/google-plus-java-api-0.0.1-sources.jar -DartifactId=google-plus-java-api -Dclassifier=sources -DgroupId=com.googlecode.googleplus -Dversion=0.0.1 -Dgpg.passphrase=PASSPHRASE
+
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -Dfile=target/google-plus-java-api-0.0.1-javadoc.jar -DartifactId=google-plus-java-api -Dclassifier=javadoc -DgroupId=com.googlecode.googleplus -Dversion=0.0.1 -Dgpg.passphrase=PASSPHRASE
