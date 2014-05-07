@@ -1,6 +1,7 @@
 package com.googlecode.googleplus.model.moments;
 
-import org.codehaus.jackson.annotate.JsonValue;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 
 public enum MomentType {
     ADD("http://schemas.google.com/AddActivity"),

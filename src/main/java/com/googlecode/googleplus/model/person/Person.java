@@ -1,8 +1,8 @@
 package com.googlecode.googleplus.model.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.springframework.http.HttpHeaders;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
