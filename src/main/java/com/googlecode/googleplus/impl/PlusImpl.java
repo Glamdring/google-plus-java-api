@@ -53,8 +53,12 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
         //TODO retrying
 
         // overriding values specified with -D, if any
-        System.setProperty("http.proxyHost", config.getProxyHost());
-        System.setProperty("http.proxyPort", String.valueOf(config.getProxyPort()));
+        if (config.getProxyHost() != null) {
+            System.setProperty("http.proxyHost", config.getProxyHost());
+        }
+        if (config.getProxyPort() != 0) {
+            System.setProperty("http.proxyPort", String.valueOf(config.getProxyPort()));
+        }
 
         //well, that's ugly..  https://issues.springsource.org/browse/SOCIAL-196, https://jira.springsource.org/browse/SOCIAL-266
         ClientHttpRequestFactory clientRequestFactory = getRestTemplate().getRequestFactory();
@@ -63,10 +67,9 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
         }
         if (HTTP_COMPONENTS_AVAILABLE) {
             if (config.getConnectTimeout() > 0) {
-                Method clientGetter = ReflectionUtils.findMethod(clientRequestFactory.getClass(), "getHttpClient");
-                clientGetter.setAccessible(true);
-                HttpClient client = (HttpClient) ReflectionUtils.invokeMethod(clientGetter, clientRequestFactory);
-                client.getParams().setIntParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, config.getConnectTimeout());
+                Method setter = ReflectionUtils.findMethod(clientRequestFactory.getClass(), "setConnectTimeout", int.class);
+                setter.setAccessible(true);
+                ReflectionUtils.invokeMethod(setter, clientRequestFactory, config.getReadTimeout());
             }
             if (config.getReadTimeout() > 0) {
                 Method setter = ReflectionUtils.findMethod(clientRequestFactory.getClass(), "setReadTimeout", int.class);
