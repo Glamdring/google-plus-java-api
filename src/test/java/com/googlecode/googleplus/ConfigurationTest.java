@@ -3,18 +3,19 @@ package com.googlecode.googleplus;
 import java.net.UnknownHostException;
 
 import org.apache.http.conn.ConnectTimeoutException;
+import org.junit.After;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
-import com.googlecode.googleplus.GooglePlusConfiguration;
-import com.googlecode.googleplus.GooglePlusFactory;
-import com.googlecode.googleplus.Plus;
 import com.googlecode.googleplus.impl.PlusImpl;
 import com.googlecode.googleplus.model.person.PeopleCollection;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ConfigurationTest {
 
     @Test
-    public void timeoutTest() throws Exception {
+    public void configurationTimeoutTest() throws Exception {
         GooglePlusConfiguration config = new GooglePlusConfiguration();
         config.setConnectTimeout(10);
         config.setReadTimeout(10);
@@ -53,6 +54,11 @@ public class ConfigurationTest {
                 throw ex;
             }
         }
+    }
 
+    @After
+    public void cleanup() {
+        System.getProperties().remove("http.proxyHost");
+        System.getProperties().remove("http.proxyPort");
     }
 }

@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.googlecode.googleplus</groupId>
     <artifactId>google-plus-java-api</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <description>A Java client for the Google+ API</description>
     <name>Google+ Java API</name>
     <url>http://code.google.com/p/google-plus-java-api/</url>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
