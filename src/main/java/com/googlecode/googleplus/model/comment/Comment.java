@@ -1,8 +1,8 @@
 package com.googlecode.googleplus.model.comment;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.joda.time.DateTime;
 
 import com.googlecode.googleplus.model.activity.ActivityActor;

@@ -1,6 +1,6 @@
 package com.googlecode.googleplus.model.activity;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
 
 @JsonIgnoreProperties(ignoreUnknown=true)

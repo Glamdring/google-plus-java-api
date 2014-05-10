@@ -1,7 +1,7 @@
 package com.googlecode.googleplus.model.moments;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.googlecode.googleplus.model.BaseFeed;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
