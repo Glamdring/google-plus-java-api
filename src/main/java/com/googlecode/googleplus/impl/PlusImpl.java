@@ -52,6 +52,10 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
     private void configure(GooglePlusConfiguration config) {
         //TODO retrying
 
+        // overriding values specified with -D, if any
+        System.setProperty("http.proxyHost", config.getProxyHost());
+        System.setProperty("http.proxyPort", String.valueOf(config.getProxyPort()));
+
         //well, that's ugly..  https://issues.springsource.org/browse/SOCIAL-196, https://jira.springsource.org/browse/SOCIAL-266
         ClientHttpRequestFactory clientRequestFactory = getRestTemplate().getRequestFactory();
         if (clientRequestFactory instanceof InterceptingClientHttpRequestFactory) {
@@ -72,10 +76,10 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
         } else {
             SimpleClientHttpRequestFactory factory = (SimpleClientHttpRequestFactory) clientRequestFactory;
             if (config.getConnectTimeout() > 0) {
-                //factory.setConnectTimeout(config.getConnectTimeout());
+                factory.setConnectTimeout(config.getConnectTimeout());
             }
             if (config.getReadTimeout() > 0) {
-                //factory.setReadTimeout(config.getReadTimeout());
+                factory.setReadTimeout(config.getReadTimeout());
             }
         }
     }
