@@ -16,7 +16,7 @@ import com.googlecode.googleplus.model.person.PersonFeed;
 
 public class PeopleOperationsImpl implements PeopleOperations {
 
-    private static final String GET_URL = GooglePlusConstants.API_URL_ROOT + "/people/{id}";
+    private static String GET_URL = GooglePlusConstants.API_URL_ROOT + "/people/{id}";
     private static final String SEARCH_URL = GooglePlusConstants.API_URL_ROOT + "/people";
     private static final String GET_BY_ACTIVITY_URL = GooglePlusConstants.API_URL_ROOT + "/activities/{activityId}/people/{collection}";
     private static final String LIST_URL = GooglePlusConstants.API_URL_ROOT + "/people/{userId}/people/{collection}";

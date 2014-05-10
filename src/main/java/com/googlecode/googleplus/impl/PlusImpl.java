@@ -3,8 +3,6 @@ package com.googlecode.googleplus.impl;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import org.apache.http.client.HttpClient;
-import org.apache.http.params.CoreConnectionPNames;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.InterceptingClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;

@@ -15,13 +15,20 @@ import com.googlecode.googleplus.impl.PlusImpl;
  */
 public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
 
+    private static final String TOKEN_URL = "https://accounts.google.com/o/oauth2/token";
+    private static final String AUTH_URL = "https://accounts.google.com/o/oauth2/auth";
+
     private GooglePlusConfiguration config;
 
     public GooglePlusFactory(String clientId, String clientSecret, GooglePlusConfiguration config) {
-        super(new OAuth2Template(clientId, clientSecret,
-                "https://accounts.google.com/o/oauth2/auth",
-                "https://accounts.google.com/o/oauth2/token"));
+        super(createOAuthTemplate(clientId, clientSecret));
         this.config = config;
+    }
+
+    private static OAuth2Template createOAuthTemplate(String clientId, String clientSecret) {
+        OAuth2Template template = new OAuth2Template(clientId, clientSecret, AUTH_URL, TOKEN_URL);
+        template.setUseParametersForClientAuthentication(true);
+        return template;
     }
 
     public GooglePlusFactory(String clientId, String clientSecret) {
@@ -72,7 +79,7 @@ public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
             if (refreshToken == null) {
                 return null;
             }
-            AccessGrant grant = GooglePlusFactory.this.getOAuthOperations().refreshAccess(refreshToken, null, null);
+            AccessGrant grant = GooglePlusFactory.this.getOAuthOperations().refreshAccess(refreshToken, null);
             if (listener != null) {
                 listener.tokensRefreshed(accessToken, grant);
             }

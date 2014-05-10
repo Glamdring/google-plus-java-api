@@ -1,6 +1,5 @@
 package com.googlecode.googleplus.impl;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.util.Assert;
