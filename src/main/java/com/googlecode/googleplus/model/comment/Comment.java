@@ -1,23 +1,23 @@
 package com.googlecode.googleplus.model.comment;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.Date;
 import java.util.List;
 
-import org.joda.time.DateTime;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import com.googlecode.googleplus.model.activity.ActivityActor;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Comment {
     private String kind;
-    private DateTime updated;
+    private Date updated;
     private CommentObject object;
     private ActivityActor actor;
     private String id;
     private String verb;
     private List<InReplyTo> inReplyTo;
     private String selfLink;
-    private DateTime published;
+    private Date published;
 
     public String getKind() {
         return kind;
@@ -25,10 +25,10 @@ public class Comment {
     public void setKind(String kind) {
         this.kind = kind;
     }
-    public DateTime getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
-    public void setUpdated(DateTime updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
     public CommentObject getObject() {
@@ -67,10 +67,10 @@ public class Comment {
     public void setSelfLink(String selfLink) {
         this.selfLink = selfLink;
     }
-    public DateTime getPublished() {
+    public Date getPublished() {
         return published;
     }
-    public void setPublished(DateTime published) {
+    public void setPublished(Date published) {
         this.published = published;
     }
 }

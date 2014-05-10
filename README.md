@@ -66,7 +66,6 @@ This library depends on a couple of libraries. All of them are industry-standard
   * spring-social (base framework for social network API clients) (including spring-social-core, and transitively: spring-web, spring-core, spring-beans and spring-context)
   * apache http components (used for handling the http traffic)
   * jackson (json mapper)
-  * joda-time (de-facto date-time standard)
   * slf4j (logging facade that delegates to whatever logger you use in your project)
 
 The preferable way of using this is through maven, so that all transitive dependencies are fetched automatically.

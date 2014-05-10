@@ -1,13 +1,14 @@
 package com.googlecode.googleplus.model.activity;
 
+import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.joda.time.DateTime;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Activity {
     private String placeName;
     private String kind;
-    private DateTime updated;
+    private Date updated;
     private ActivityProvider provider;
     private String title;
     private String url;
@@ -23,7 +24,7 @@ public class Activity {
     private String crosspostSource;
     private boolean placeholder;
     private String annotation;
-    private DateTime published;
+    private Date published;
 
     public String getPlaceName() {
         return placeName;
@@ -161,19 +162,19 @@ public class Activity {
         this.annotation = annotation;
     }
 
-    public DateTime getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
 
-    public void setUpdated(DateTime updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
 
-    public DateTime getPublished() {
+    public Date getPublished() {
         return published;
     }
 
-    public void setPublished(DateTime published) {
+    public void setPublished(Date published) {
         this.published = published;
     }
 }

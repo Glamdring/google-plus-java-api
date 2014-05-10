@@ -1,16 +1,15 @@
 package com.googlecode.googleplus.model;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
-
-import org.joda.time.DateTime;
 
 public abstract class BaseFeed<T> {
     private String nextPageToken;
     private String kind;
     private String etag;
     private String title;
-    private DateTime updated;
+    private Date updated;
     private String nextLink;
     private String id;
     private String selfLink;
@@ -40,11 +39,11 @@ public abstract class BaseFeed<T> {
         this.title = title;
     }
 
-    public DateTime getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
 
-    public void setUpdated(DateTime updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
 
