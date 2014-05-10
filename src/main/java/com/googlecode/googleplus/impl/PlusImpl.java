@@ -52,14 +52,6 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
     private void configure(GooglePlusConfiguration config) {
         //TODO retrying
 
-        // overriding values specified with -D, if any
-        if (config.getProxyHost() != null) {
-            System.setProperty("http.proxyHost", config.getProxyHost());
-        }
-        if (config.getProxyPort() != 0) {
-            System.setProperty("http.proxyPort", String.valueOf(config.getProxyPort()));
-        }
-
         //well, that's ugly..  https://issues.springsource.org/browse/SOCIAL-196, https://jira.springsource.org/browse/SOCIAL-266
         ClientHttpRequestFactory clientRequestFactory = getRestTemplate().getRequestFactory();
         if (clientRequestFactory instanceof InterceptingClientHttpRequestFactory) {
@@ -95,14 +87,23 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
     }
 
     public ActivityOperations getActivityOperations() {
+        if (activityOperations == null) {
+            throw new IllegalStateException("Call init() before using this object");
+        }
         return activityOperations;
     }
 
     public PeopleOperations getPeopleOperations() {
+        if (peopleOperations == null) {
+            throw new IllegalStateException("Call init() before using this object");
+        }
         return peopleOperations;
     }
 
     public CommentOperations getCommentOperations() {
+        if (commentOperations == null) {
+            throw new IllegalStateException("Call init() before using this object");
+        }
         return commentOperations;
     }
 
@@ -112,6 +113,9 @@ public class PlusImpl extends AbstractOAuth2ApiBinding implements Plus {
     }
 
     public MomentsOperations getHistoryOperations() {
+        if (historyOperations == null) {
+            throw new IllegalStateException("Call init() before using this object");
+        }
         return historyOperations;
     }
 }

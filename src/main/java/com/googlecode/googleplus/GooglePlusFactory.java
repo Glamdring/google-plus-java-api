@@ -11,7 +11,7 @@ import com.googlecode.googleplus.impl.PlusImpl;
 
 /**
  * Suitable for direct use - if you are using Spring Social configuration builder see GooglePlusConnectionFactory.
- * 
+ *
  */
 public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
 
@@ -38,10 +38,24 @@ public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
     }
 
     public Plus getApi(String accessToken, String refreshToken, OAuth2RefreshListener listener) {
+        // proxy configuring needs to be done before instantiation the client object,
+        // because otherwise system settings are read instead
+        configureProxy();
+
         // this is a custom workaround: https://jira.springsource.org/browse/SOCIAL-263
         PlusImpl plus = new PlusImpl(accessToken, config, new DefaultOAuth2RefreshCallback(accessToken, refreshToken, listener));
         plus.init();
         return plus;
+    }
+
+    private void configureProxy() {
+        // overriding values specified with -D, if any
+        if (config.getProxyHost() != null) {
+            System.setProperty("http.proxyHost", config.getProxyHost());
+        }
+        if (config.getProxyPort() != 0) {
+            System.setProperty("http.proxyPort", String.valueOf(config.getProxyPort()));
+        }
     }
 
     public final class DefaultOAuth2RefreshCallback implements OAuth2RefreshCallback {
