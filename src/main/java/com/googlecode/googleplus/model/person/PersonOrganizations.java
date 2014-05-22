@@ -1,5 +1,8 @@
 package com.googlecode.googleplus.model.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PersonOrganizations {
 
     private String startDate;

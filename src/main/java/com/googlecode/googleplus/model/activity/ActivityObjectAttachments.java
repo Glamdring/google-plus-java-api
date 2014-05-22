@@ -1,5 +1,8 @@
 package com.googlecode.googleplus.model.activity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ActivityObjectAttachments {
     private String displayName;
     private ActivityObjectAttachmentsImage fullImage;

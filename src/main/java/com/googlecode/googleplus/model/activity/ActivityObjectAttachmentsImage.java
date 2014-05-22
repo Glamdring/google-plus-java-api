@@ -1,11 +1,14 @@
 package com.googlecode.googleplus.model.activity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ActivityObjectAttachmentsImage {
     private String url;
     private long width;
     private String type;
     private long height;
+
     public String getUrl() {
         return url;
     }

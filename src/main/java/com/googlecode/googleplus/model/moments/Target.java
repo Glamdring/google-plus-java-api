@@ -1,5 +1,8 @@
 package com.googlecode.googleplus.model.moments;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Target {
     private String url;
 

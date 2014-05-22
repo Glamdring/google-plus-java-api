@@ -1,10 +1,14 @@
 package com.googlecode.googleplus.model.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PersonUrls {
 
     private String type;
     private boolean primary;
     private String value;
+    private String label;
 
     public String getType() {
         return type;
@@ -30,4 +34,11 @@ public class PersonUrls {
         this.value = value;
     }
 
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
 }

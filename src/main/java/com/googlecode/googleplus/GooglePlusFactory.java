@@ -85,6 +85,5 @@ public class GooglePlusFactory extends AbstractOAuth2ServiceProvider<Plus> {
             }
             return grant.getAccessToken();
         }
-
     }
 }

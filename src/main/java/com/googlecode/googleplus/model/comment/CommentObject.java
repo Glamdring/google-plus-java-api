@@ -1,8 +1,12 @@
 package com.googlecode.googleplus.model.comment;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CommentObject {
     private String objectType;
     private String content;
+
     public String getObjectType() {
         return objectType;
     }
