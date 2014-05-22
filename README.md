@@ -54,7 +54,7 @@ Where the clientId and clientKey are supplied by Google having created a Web App
 An example scope:
 
 ```
-https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me email profile
 ```
 
 Google allows the registration of multiple email addresses of various types. For the purposes of UserProfile (as supplied by Spring Social), the email address is of the Google Account type. This may be null.
