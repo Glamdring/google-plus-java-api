@@ -1,8 +1,9 @@
 package com.googlecode.googleplus;
 
+import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Parameters;
 
-import com.googlecode.googleplus.model.person.Person;
+import com.google.common.collect.Lists;
 
 public class ManualTest {
 
@@ -12,6 +13,7 @@ public class ManualTest {
         OAuth2Parameters oAuthParams = new OAuth2Parameters();
         oAuthParams.setRedirectUri("<https-url>/googleplus/authenticate");
         oAuthParams.setScope("https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.moments.write");
+        oAuthParams.put("access_type", Lists.newArrayList("offline"));
 
         GooglePlusFactory factory = new GooglePlusFactory(id, secret);
 
@@ -24,11 +26,11 @@ public class ManualTest {
 //        String url = factory.getOAuthOperations().buildAuthenticateUrl(oAuthParams);
 //        System.out.println(url);
 
-//        AccessGrant grant = factory.getOAuthOperations().exchangeForAccess("4/SFP8aeNosDMP5-FHagd4tn3DJ1dE.EmQMHn3p7p0eOl05ti8ZT3afWTlLjAI", oAuthParams.getRedirectUri(), null);
+//        AccessGrant grant = factory.getOAuthOperations().exchangeForAccess("<code>", oAuthParams.getRedirectUri(), null);
 //        System.out.println(grant.getAccessToken());
 //        System.out.println(grant.getRefreshToken());
 
-//        Plus plus = factory.getApi("");
+//        Plus plus = factory.getApi("<token>");
 //        Person person = plus.getPeopleOperations().get("me");
 //        System.out.println(person.getName().getFamilyName());
     }
