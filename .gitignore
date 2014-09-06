@@ -4,3 +4,4 @@ target/
 .settings/
 .svn/
 bin/
+pom.xml.asc
