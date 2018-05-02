@@ -1,10 +1,10 @@
-##Google+ Java API
+## Google+ Java API
 
 A Java client for the <a href="https://developers.google.com/+/api/">Google+ API</a>, based on <a href="http://www.springsource.org/spring-social">spring-social</a>.
 
 This library is built ontop of spring-social and uses apache http components and jackson (see below the full list of dependencies)
 
-###Usage
+### Usage
 
 The way to use the API is:
 
@@ -17,7 +17,7 @@ ActivityFeed activities = plus.getActivityOperations().list(userId);
 
 The factory is thread-safe and is supposed to have a single instance in your application.
 
-###OAuth2
+### OAuth2
 
 Google+ uses OAuth2. Read through <a href="https://developers.google.com/+/api/oauth">the documentation</a> to get a clear picture. Here tokens are obtained as follows (in a web application):
 
@@ -39,7 +39,7 @@ AccessGrant accessGrant = factory.getOAuthOperations()
     .exchangeForAccess(code, oAuthParams.getRedirectUri(), null);
 ```
 
-####Spring Social Configuration
+#### Spring Social Configuration
 
 If you want to integrate using Spring Social as described <a href="http://docs.spring.io/spring-social/docs/1.0.3.RELEASE/reference/html/connecting.html">in their documentation</a> simply add:
 
@@ -59,7 +59,7 @@ https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.
 
 Google allows the registration of multiple email addresses of various types. For the purposes of UserProfile (as supplied by Spring Social), the email address is of the Google Account type. This may be null.
 
-###Dependencies
+### Dependencies
 
 This library depends on a couple of libraries. All of them are industry-standards - widely tested and adopted:
 
@@ -70,7 +70,7 @@ This library depends on a couple of libraries. All of them are industry-standard
 
 The preferable way of using this is through maven, so that all transitive dependencies are fetched automatically.
 
-###Download
+### Download
 
 You can download the .jar file from the <a href="https://github.com/Glamdring/google-plus-java-api/releases">Releases</a> section, or you can get it with maven:
 
